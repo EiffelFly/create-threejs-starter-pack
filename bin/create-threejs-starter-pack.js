@@ -17,7 +17,7 @@ const appName = process.argv[2];
 const starterPackPath = path.join(process.cwd(), appName);
 
 try {
-  fs.mkdirSync(appPath);
+  fs.mkdirSync(starterPackPath);
 } catch (err) {
   if (err.code === "EEXIST") {
     console.log(c.red.bold(`App name ${appNmae} already exist`));

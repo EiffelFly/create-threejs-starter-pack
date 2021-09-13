@@ -1,6 +1,6 @@
 {
   "name": "create-threejs-starter-pack",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Create Three.js boilerplate with webpack and more",
   "main": "src/three.js",
   "scripts": {
