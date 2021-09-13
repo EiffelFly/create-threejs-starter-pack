@@ -6,7 +6,7 @@ const path = require("path");
 module.exports = {
   entry: path.resolve(__dirname, "../src/three.js"),
   output: {
-    filename: "bundle.[contenthash].js",
+    filename: "bundle.js",
     path: path.resolve(__dirname, "../dist"),
   },
   devtool: "source-map",
@@ -32,30 +32,16 @@ module.exports = {
         use: ["babel-loader"],
       },
       {
-        test: /\.css$/,
-        use: [MiniCSSExtractPlugin.loader, "css-loader"],
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
       },
       {
-        test: /\.(jpg|png|gif|svg)$/,
-        use: [
-          {
-            loader: "file-loader",
-            options: {
-              outputPath: "assets/images/",
-            },
-          },
-        ],
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
       },
       {
-        test: /\.(ttf|eot|woff|woff2)$/,
-        use: [
-          {
-            loader: "file-loader",
-            options: {
-              outputPath: "assets/fonts/",
-            },
-          },
-        ],
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        type: 'asset/resource',
       },
     ],
   },
