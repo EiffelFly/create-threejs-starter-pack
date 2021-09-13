@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack serve --config ./webpack/webpack.dev.js",
-    "build": "webpack --config ./webpack/webpack.prod.js",
+    "build": "webpack --config ./webpack/webpack.prod.js"
   },
   "bin": {
     "create-threejs-starter-pack": "bin/create-threejs-starter-pack.js"
@@ -44,7 +44,6 @@
   "homepage": "https://github.com/EiffelFly/create-threejs-starter-pack#readme",
   "keywords": [
     "three.js",
-    "3d",
-    "npx"
+    "webpack"
   ]
 }
