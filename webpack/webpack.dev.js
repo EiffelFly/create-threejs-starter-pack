@@ -12,7 +12,6 @@ module.exports = merge(commonConfiguration, {
       directory: path.resolve(__dirname, "static"),
       watch: true,
     },
-    open: true,
     https: false,
     allowedHosts: "all",
     client: {
