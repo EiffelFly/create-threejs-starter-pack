@@ -47,6 +47,9 @@ const setup = async () => {
     console.log(c.blue.bold("📦  Installing dependencies..."));
     console.log();
     await runCmd("npm install");
+
+    // Remove git link
+    await runCmd('npx rimraf ./.git');
   
     console.log(c.blue.bold("🧹  Cleaning up..."));
     console.log();
