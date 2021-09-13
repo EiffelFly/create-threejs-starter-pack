@@ -6,7 +6,7 @@ const path = require("path");
 module.exports = {
   entry: path.resolve(__dirname, "../src/three.js"),
   output: {
-    filename: "bundle.js",
+    filename: "bundle.[contenthash].js",
     path: path.resolve(__dirname, "../dist"),
   },
   devtool: "source-map",
