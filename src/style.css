@@ -11,7 +11,7 @@
 html,
 body {
   height: 100vh;
-  font-family: monospace;
+  font-family: Inconsolata;
 }
 
 .webgl {
@@ -20,8 +20,3 @@ body {
   outline: none;
 }
 
-.title {
-  color: #a39c9c;
-  font-size: 48px;
-  font-family: Inconsolata;
-}
