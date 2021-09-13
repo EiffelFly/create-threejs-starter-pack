@@ -2,16 +2,20 @@
   "name": "create-threejs-starter-pack",
   "version": "1.0.0",
   "description": "Create Three.js boilerplate with webpack and more",
-  "main": "index.js",
+  "main": "src/three.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack serve --config ./webpack/webpack.dev.js",
     "build": "webpack --config ./webpack/webpack.prod.js",
-    "create-threejs-starter-pack": "./bin/create-threejs-starter-pack.js"
+    "testScript": "./bin/create-threejs-starter-pack.js"
+  },
+  "bin": {
+    "create-threejs-starter-pack": "bin/create-threejs-starter-pack.js"
   },
   "author": "Summerbud",
   "license": "MIT",
   "dependencies": {
+    "ansi-colors": "^4.1.1",
     "dat.gui": "^0.7.7",
     "three": "^0.132.2"
   },
@@ -22,16 +26,21 @@
     "clean-webpack-plugin": "^4.0.0",
     "copy-webpack-plugin": "^9.0.1",
     "css-loader": "^6.2.0",
-    "file-loader": "^6.2.0",
     "html-loader": "^2.1.2",
     "html-webpack-plugin": "^5.3.2",
-    "mini-css-extract-plugin": "^2.2.2",
     "portfinder-sync": "^0.0.2",
     "style-loader": "^3.2.1",
-    "url-loader": "^4.1.1",
     "webpack": "^5.52.1",
     "webpack-cli": "^4.8.0",
     "webpack-dev-server": "^4.2.0",
     "webpack-merge": "^5.8.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/EiffelFly/create-threejs-starter-pack.git"
+  },
+  "bugs": {
+    "url": "https://github.com/EiffelFly/create-threejs-starter-pack/issues"
+  },
+  "homepage": "https://github.com/EiffelFly/create-threejs-starter-pack#readme"
 }
