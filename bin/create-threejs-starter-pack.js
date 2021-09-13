@@ -20,7 +20,7 @@ try {
   fs.mkdirSync(starterPackPath);
 } catch (err) {
   if (err.code === "EEXIST") {
-    console.log(c.red.bold(`App name ${appNmae} already exist`));
+    console.log(c.red.bold(`App name ${appName} already exist`));
   } else {
     console.log(err);
   }
@@ -34,6 +34,7 @@ const setup = async () => {
     );
     console.log();
     console.log(c.blue.bold("🚀  Create three.js starter pack"));
+    console.log();
     console.log(c.cyan(`📁  Folder name: ${appName}`));
     console.log();
     console.log(c.blue.bold("📥  Downloading necessary file..."));
@@ -50,7 +51,6 @@ const setup = async () => {
     console.log(c.blue.bold("🧹  Cleaning up..."));
     console.log();
   
-    fs.rmdirSync(path.join(starterPackPath, "bin"), { recursive: true });
     fs.unlinkSync(path.join(starterPackPath, "package.json"));
     buildPackageJson()
 
@@ -60,11 +60,9 @@ const setup = async () => {
     console.log("Check README.md for more informations")
 
   } catch(err){
-    console.log(c.red.bold(error))
+    console.log(c.red.bold(err))
   }
 };
-
-setup();
 
 const runCmd = async (command) => {
   try {
@@ -113,3 +111,5 @@ const buildPackageJson = () => {
     "utf8"
   );
 };
+
+setup();
