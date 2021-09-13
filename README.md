@@ -1,13 +1,17 @@
 
-1. Build a box
-2. Use Orthographic Camera to setup isometric view
-3. 
+# Create-threejs-starter-pack
 
+Create Three.js boilerplate with webpack and more. 
 
+Goal: the three.js file create by this boilerplate can be immediately moved to production server.
 
+## Usage
 
+```sh
+npx create-threejs-starter-pack
+```
 
-### REF
+## Fatures
 
-- [Three.js Orthographic Camera - Interactive 3D Graphics](https://www.youtube.com/watch?v=k3adBAnDpos&ab_channel=Udacity)
-- [Three.js isometric camera](http://bl.ocks.org/nitaku/032c1724a0433ae0f85f)
+- Webpack
+- Load static file

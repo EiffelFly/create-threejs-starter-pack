@@ -1,6 +1,6 @@
 {
   "name": "create-threejs-starter-pack",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Create Three.js boilerplate with webpack and more",
   "main": "src/three.js",
   "scripts": {
@@ -42,5 +42,10 @@
   "bugs": {
     "url": "https://github.com/EiffelFly/create-threejs-starter-pack/issues"
   },
-  "homepage": "https://github.com/EiffelFly/create-threejs-starter-pack#readme"
+  "homepage": "https://github.com/EiffelFly/create-threejs-starter-pack#readme",
+  "keywords": [
+    "three.js",
+    "3d",
+    "npx"
+  ]
 }
