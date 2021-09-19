@@ -57,6 +57,8 @@ const setup = async () => {
     fs.unlinkSync(path.join(starterPackPath, "package.json"));
     buildPackageJson()
 
+    fs.rmdirSync(path.join(starterPackPath, 'bin'), { recursive: true});
+
     await runCmd("npm uninstall ansi-colors");
     
     console.log("🎉  You had successfully set up the starter pack")
@@ -72,10 +74,8 @@ const runCmd = async (command) => {
     const { stdout, stderr } = await exec(command);
     console.log(stdout);
     console.log(stderr);
-  } catch {
-    (error) => {
-      console.log(c.red.bold(error));
-    };
+  } catch(err) {
+    return Promise.reject(err)
   }
 };
 
@@ -102,7 +102,7 @@ const buildPackageJson = () => {
       "html-webpack-plugin": "^5.3.2",
       "portfinder-sync": "^0.0.2",
       "style-loader": "^3.2.1",
-      webpack: "^5.52.1",
+      "webpack": "^5.52.1",
       "webpack-cli": "^4.8.0",
       "webpack-dev-server": "^4.2.0",
       "webpack-merge": "^5.8.0",
