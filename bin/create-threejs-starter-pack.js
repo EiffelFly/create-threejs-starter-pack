@@ -57,8 +57,8 @@ const setup = async () => {
     fs.unlinkSync(path.join(starterPackPath, "package.json"));
     buildPackageJson()
 
-    fs.rmdirSync(path.join(starterPackPath, 'bin'), { recursive: true});
-
+    fs.rm(path.join(starterPackPath, 'bin'), { recursive: true })
+    
     await runCmd("npm uninstall ansi-colors");
     
     console.log("🎉  You had successfully set up the starter pack")
